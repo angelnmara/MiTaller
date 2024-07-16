@@ -20,6 +20,7 @@ import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
+import androidx.compose.ui.tooling.preview.Devices
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.DpOffset
 import androidx.compose.ui.unit.dp
@@ -758,6 +759,26 @@ fun UsuarioHomeUser3(modifier: Modifier = Modifier) {
     }
 }
 
+@Preview(name = "NEXUS_7", device = Devices.NEXUS_7)
+@Preview(name = "NEXUS_7_2013", device = Devices.NEXUS_7_2013)
+@Preview(name = "NEXUS_5", device = Devices.NEXUS_5)
+@Preview(name = "NEXUS_6", device = Devices.NEXUS_6)
+@Preview(name = "NEXUS_9", device = Devices.NEXUS_9)
+@Preview(name = "NEXUS_10", device = Devices.NEXUS_10)
+@Preview(name = "NEXUS_5X", device = Devices.NEXUS_5X)
+@Preview(name = "NEXUS_6P", device = Devices.NEXUS_6P)
+@Preview(name = "PIXEL_C", device = Devices.PIXEL_C)
+@Preview(name = "PIXEL", device = Devices.PIXEL)
+@Preview(name = "PIXEL_XL", device = Devices.PIXEL_XL)
+@Preview(name = "PIXEL_2", device = Devices.PIXEL_2)
+@Preview(name = "PIXEL_2_XL", device = Devices.PIXEL_2_XL)
+@Preview(name = "PIXEL_3", device = Devices.PIXEL_3)
+@Preview(name = "PIXEL_3_XL", device = Devices.PIXEL_3_XL)
+@Preview(name = "PIXEL_3A", device = Devices.PIXEL_3A)
+@Preview(name = "PIXEL_3A_XL", device = Devices.PIXEL_3A_XL)
+@Preview(name = "PIXEL_4", device = Devices.PIXEL_4)
+@Preview(name = "PIXEL_4_XL", device = Devices.PIXEL_4_XL)
+@Preview(name = "AUTOMOTIVE_1024p", device = Devices.AUTOMOTIVE_1024p)
 @Preview(widthDp = 412, heightDp = 1021)
 @Composable
 private fun UsuarioHomeUser3Preview() {

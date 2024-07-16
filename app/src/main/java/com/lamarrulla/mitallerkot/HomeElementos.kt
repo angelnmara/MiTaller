@@ -28,12 +28,13 @@ import androidx.compose.ui.graphics.ColorFilter
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.style.TextAlign
+import androidx.compose.ui.tooling.preview.Devices
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.lamarrulla.mitallerkot.relay.compose.RowScopeInstanceImpl.weight
 
 class Cliente{
-    val nombre = "Bautista Motors"
+    val nombre = "Mecanica Automotriz"
     val especialidad = "Especialista en transmiciones"
     val image: Int = R.drawable.usuario_home_user_3_image_45
 }
@@ -58,7 +59,6 @@ class Cliente{
 @Preview(name = "PIXEL_4", device = Devices.PIXEL_4)
 @Preview(name = "PIXEL_4_XL", device = Devices.PIXEL_4_XL)
 @Preview(name = "AUTOMOTIVE_1024p", device = Devices.AUTOMOTIVE_1024p)*/
-
 @Preview
 @Composable
 fun CardClientePreview(){
@@ -87,22 +87,29 @@ fun MiCalificacion(){
 @Preview
 @Composable
 fun MiHomePrincipal(){
-    HomePrincipal();
+    HomePrincipal(Modifier);
 }
 
 @Composable
-fun HomePrincipal(){
+fun HomePrincipal(modifier: Modifier){
     Row {
         Image(painter = painterResource(
             id = R.drawable.usuario_home_user_3_vector25),
-            contentDescription = "imagen menu")
-        Box(modifier = Modifier
+            contentDescription = "imagen menu",
+            Modifier.background(MaterialTheme.colorScheme.primary)
+        )
+        Column(modifier = Modifier
             .padding(10.dp)
-            .weight(1f).background(Color.Red)
-            .align(Alignment.CenterVertically)){
-            Column {
-                ClienteAvatar(cliente = Cliente())
+            .weight(1f)
+            .background(Color.Red)
+            .align(Alignment.CenterVertically)) {
+            Box(){
+                Column {
+                    ClienteAvatar(cliente = Cliente())
+                }
             }
+            Text("24 de Abril del 2024")
+            Text("David Rincon Angeles")
         }
         Box(){
             Image(
@@ -193,7 +200,7 @@ fun ClienteCardRow(cliente: Cliente, modifier: Modifier) {
                 style = MaterialTheme.typography.bodyLarge
             )
             Text(cliente.especialidad)
-            Calificacion(calificacion = 5)
+            Calificacion(calificacion = 4)
         }
         Text(
             text = "Ver mas",
@@ -249,5 +256,22 @@ fun ClienteAvatar(cliente: Cliente) {
             modifier = Modifier
                 .align(Alignment.TopEnd), tint = MaterialTheme.colorScheme.primary
         )
+    }
+}
+
+@Preview
+@Composable
+fun MiprimerElementoPreview(){
+    MiprimerElemento();
+}
+
+@Composable
+fun MiprimerElemento(){
+    Row {
+        Column {
+            Text(text = "Hola mundo")
+            Text(text = "5464546541")
+        }
+        Text(text = "preview")
     }
 }

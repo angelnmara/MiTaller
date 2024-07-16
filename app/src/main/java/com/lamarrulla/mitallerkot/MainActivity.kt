@@ -20,8 +20,9 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             MiTallerKotTheme {
-                Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    ExamplesHomeMobile(
+                Scaffold(modifier = Modifier.fillMaxSize()) {
+                    innerPadding ->
+                    UsuarioHomeUser3(
                         modifier = Modifier.padding(innerPadding)
                     )
                 }
