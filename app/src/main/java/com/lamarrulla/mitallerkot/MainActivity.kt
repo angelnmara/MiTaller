@@ -12,6 +12,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Devices
 import androidx.compose.ui.tooling.preview.Preview
+import com.lamarrulla.mitallerkot.home.Home
 import com.lamarrulla.mitallerkot.ui.theme.MiTallerKotTheme
 
 class MainActivity : ComponentActivity() {
@@ -22,7 +23,7 @@ class MainActivity : ComponentActivity() {
             MiTallerKotTheme {
                 Scaffold(modifier = Modifier.fillMaxSize()) {
                     innerPadding ->
-                    UsuarioHomeUser3(
+                    Home(
                         modifier = Modifier.padding(innerPadding)
                     )
                 }
@@ -39,7 +40,7 @@ fun Greeting(name: String, modifier: Modifier = Modifier) {
     )
 }
 
-/*@Preview(name = "NEXUS_7", device = Devices.NEXUS_7)
+@Preview(name = "NEXUS_7", device = Devices.NEXUS_7)
 @Preview(name = "NEXUS_7_2013", device = Devices.NEXUS_7_2013)
 @Preview(name = "NEXUS_5", device = Devices.NEXUS_5)
 @Preview(name = "NEXUS_6", device = Devices.NEXUS_6)
@@ -58,11 +59,11 @@ fun Greeting(name: String, modifier: Modifier = Modifier) {
 @Preview(name = "PIXEL_3A_XL", device = Devices.PIXEL_3A_XL)
 @Preview(name = "PIXEL_4", device = Devices.PIXEL_4)
 @Preview(name = "PIXEL_4_XL", device = Devices.PIXEL_4_XL)
-@Preview(name = "AUTOMOTIVE_1024p", device = Devices.AUTOMOTIVE_1024p)*/
+@Preview(name = "AUTOMOTIVE_1024p", device = Devices.AUTOMOTIVE_1024p)
 @Preview
 @Composable
 fun UsuarioPreview() {
     MiTallerKotTheme {
-        ExamplesHomeMobile()
+        Home()
     }
 }
